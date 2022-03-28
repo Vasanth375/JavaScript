@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb on&off buttons</title>
+    <script>
+        function OnBulb() {
+            document.getElementById("on").src="C:\\Users\\VASANTH\\mycode\\Javascript\\Images\\pic_bulbon.gif";
+            
+        }
+        function OffBulb(){
+            document.getElementById("on").src="C:\\Users\\VASANTH\\mycode\\Javascript\\Images\\pic_bulboff.gif";
+            
+        }
+    </script>
+</head>
+<body>
+    <button type="button" onclick="OnBulb()" >Turn on bulb</button> 
+    <img id="on" src="C:\\Users\\VASANTH\\mycode\\Javascript\\Images\\pic_bulboff.gif" alt="Bulb off" style="width: 100px;">
+    <button type="button" onclick="OffBulb()">Turn off bulb</button>
+    <!-- Note: In this script all elements id must be same because we are performing operation on single image-->
+</body>
+</html>
