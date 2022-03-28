@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript addition stuff</title>
+
+</head>
+<body>
+
+    <p>
+        Enter A number:- <input type="number" name="A" id="A"> <br><br>
+        Enter B number:- <input type="number" name="B" id="B">
+    </p> 
+
+    <button type="submit" onclick="ADD()">ADD</button>
+
+    <p id="output"></p>
+    <p id="result"></p>
+
+    <script>
+
+        function ADD(){
+            let a = document.getElementById('A').value;
+            let b = document.getElementById('B').value;
+            result(a,b);
+        }
+        
+        function result(a,b)
+        {
+            // conerting string to number
+            // let c = +a +  +b;
+            let c = Number(a) + Number(b);
+            document.getElementById('result').innerHTML = a + ' + ' + b + ' = ' + c;
+            document.getElementById('output').innerHTML = "Addition of ";
+        }
+        
+    </script>
+</body>
+</html>
