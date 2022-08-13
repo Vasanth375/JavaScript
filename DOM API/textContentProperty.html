@@ -1,0 +1,23 @@
+<!-- DOM stands for Document Object Model. It is an object-oriented representation of structured documents like XML
+    and HTML. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <h1 id="headingOne">hi! World</h1>
+    <script>
+        // this textContent property will change the value of h1 tag hi! world -> Hello world
+        let ele = document.getElementById('headingOne').textContent = 'Hello World';    //Note: ID must be same for h1 tag 
+
+        // In Js we can also create p tag or any other tag using this property
+        let element = document.createElement('p');
+        element.textContent = 'By createElement method and textContent property a p element created';
+        document.body.appendChild(element);   //add the newly created element to the DOM
+    </script>
+</body>
+</html>
