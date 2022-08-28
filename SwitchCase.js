@@ -25,10 +25,15 @@ function caseInSwitch(val) {
       case 4:
         answer = 'delta';
         break;
+      
+      default:
+        answer = 'Default';
+        break;
   
     }  
     // Only change code above this line
     return answer;
   }
   
-  caseInSwitch(1);
+  console.log(caseInSwitch(1));
+  console.log(caseInSwitch(0));
