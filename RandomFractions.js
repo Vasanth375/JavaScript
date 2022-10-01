@@ -1,0 +1,14 @@
+/*
+JavaScript has a Math.random() function that generates a random decimal number between 0 (inclusive) and 1 (exclusive). 
+Thus Math.random() can return a 0 but never return a 1.
+*/
+
+function randomFraction() {
+
+    // Only change code below this line
+  
+    return Math.random(1);
+  
+    // Only change code above this line
+  }
+console.log(randomFraction());
