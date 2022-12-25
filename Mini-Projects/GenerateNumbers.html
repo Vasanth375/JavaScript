@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Numbers</title>
+    <style>
+        body{
+            background: linear-gradient(blue, green);
+            height: 370px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+        }
+
+        .head, #heading{
+            text-align: center;
+            font-size: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+        }
+        main, .output{
+            margin: 70px;
+            padding: 20px;
+        }
+        label{
+            font: 20px bold;
+        }
+        #Number{
+            background-color: cadetblue;
+        }
+
+        .output{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="head">Generate Numbers</h1>
+    <main>
+        <form action="#">
+
+            <p id="heading">Generate Numbers like Even Numbers, Odd Numbers and Prime Numbers</p>
+            <label for="Number">Enter the number:</label><input type="number" id="Number" value="10">
+            <p id="note"><i>Note:</i>Defaultly It's value is 10</p>
+
+            <input type="submit" value="Even" onclick="EvenNumbers()">
+            <input type="submit" value="Odd" onclick="OddNumbers()">
+            <input type="submit" value="Prime" onclick="PrimeNumbers()">
+
+        </form>
+    </main>
+    <div class="output">
+        <h4 id="Numbers"></h4>
+    </div>
+    <!-- This is javascript -->
+    <script>
+
+        function EvenNumbers(){
+            let a = "";
+            var valueInput = document.getElementById("Number").value;
+
+            for (let index = 0; index < valueInput; index++) {
+                if(index%2 == 0){
+                    a+=index+" ";
+                }
+            }
+            document.getElementById("Numbers").innerHTML = "Even Numbers are: " + a;
+        }
+
+        function OddNumbers(){
+            let a = "";
+            var valueInput = document.getElementById("Number").value;
+            for (let index = 0; index < valueInput; index++) {
+                if(index%3 == 0){
+                    a+=index+" ";
+                }
+            }
+            document.getElementById("Numbers").innerHTML = "Odd Numbers are: " + a;
+        }
+        
+        function isPrime(n){
+            if(n == 1 || n == 0){
+                return false;
+            }
+
+            for(let i = 2; i<n; i++){
+                if(n%i == 0){
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        function PrimeNumbers(){
+            /*Algorithm: 
+            1. Take input from the user.
+            2. check if it is 1 or 0, return false if the condition is true, because 1 and 0 are not prime numbers
+            3. start a loop from 2 to n
+                i. check the condition that if n divisible by i return false
+                // if the condition is true, return false that it is not a prime number
+            4. if the above conditions doesn't satisfies returns true that the number is prime number
+            */
+            let a = "";
+            var valueInput = document.getElementById("Number").value;
+            for (let index = 0; index < valueInput; index++) {
+                if(isPrime(index)){
+                    a+=index+" ";
+                }
+            }
+            document.getElementById("Numbers").innerHTML = "Even Numbers are: " + a;
+        }
+    </script>
+</body>
+</html>
