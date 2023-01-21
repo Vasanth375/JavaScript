@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Hellow</title>
+    <title>checking for Even and Odd</title>
     <style>
         p{
             font-size: 30px;
@@ -22,15 +22,16 @@
         <h1>0</h1>
         <button onclick="counter()">Click me!</button>
         <script>
-            let a=0;
+            let a=-1;
             function counter(){
                 a++;
-                document.querySelector("h1").innerHTML = a;
                 if(a%2 == 0){
+                    document.querySelector("h1").innerHTML = a+" is Even";
                     alert(`counter at ${a} and Divisible by 2`);
+                }else{
+                    document.querySelector("h1").innerHTML = a + " is Odd";
                 }
             }
-
         </script>
     </body>
 </body>
